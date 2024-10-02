@@ -1,5 +1,6 @@
 package com.kesa.multimedia.api
 
+import com.kesa.multimedia.utils.Constants
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,7 +15,7 @@ object ApiClient {
 
 
     val retrofit = Retrofit.Builder()
-        .baseUrl("https://5017-197-232-143-191.ngrok-free.app")
+        .baseUrl(Constants.BASEURL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
